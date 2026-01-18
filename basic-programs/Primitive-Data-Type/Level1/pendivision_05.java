@@ -17,7 +17,6 @@ public class pendivision_05 {
         }
         else if (pens % students==2) {
             remainingpen=2;
-            
         }
         System.out.println("The Pen Per Student is :"+penperstudent+" and the remaining pen not distributed is :"+remainingpen);
     }
