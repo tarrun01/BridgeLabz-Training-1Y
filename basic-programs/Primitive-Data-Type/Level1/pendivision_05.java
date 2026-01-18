@@ -13,7 +13,7 @@ public class pendivision_05 {
         }
         else if (pens % students==1) {
            
-            remainingpen=1;
+             remainingpen=1;
         }
         else if (pens % students==2) {
             remainingpen=2;
