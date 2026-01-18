@@ -3,7 +3,7 @@
 //Purpose-Write a program to find the side of the square whose parameter you read from user;
 
 import java.util.Scanner;
-public class sidefinder_13 {
+public class sidefinder_03 {
     public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);
        System.out.print("Enter Parameter of Square:"); 
