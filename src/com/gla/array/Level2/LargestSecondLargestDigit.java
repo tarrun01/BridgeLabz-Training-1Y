@@ -1,11 +1,13 @@
+package com.gla.array.Level2;
+
 import java.util.Scanner;
 
-public class LargestSecondLargestDigitDynamic {
+public class LargestSecondLargestDigit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Enter a number: ");
-        long number = sc.nextLong();
+        int number = sc.nextInt();
         
         // Handle negative numbers
         if (number < 0) {
@@ -18,36 +20,23 @@ public class LargestSecondLargestDigitDynamic {
         
         // Variable to reflect array index
         int index = 0;
-        long originalNumber = number;
+        int originalNumber = number;
         
         // Loop to store digits in array
         while (number != 0) {
-            // Check if array needs to be resized
-            if (index == maxDigit) {
-                // Increase maxDigit by 10
-                maxDigit += 10;
-                
-                // Create temp array of new size
-                int[] temp = new int[maxDigit];
-                
-                // Copy elements from current digits array to temp
-                for (int i = 0; i < digits.length; i++) {
-                    temp[i] = digits[i];
-                }
-                
-                // Assign temp array to digits array
-                digits = temp;
-                
-                System.out.println("Array resized to accommodate more digits...");
-            }
-            
             // Remove last digit and add to array
-            int digit = (int)(number % 10);
+            int digit = number % 10;
             digits[index] = digit;
             index++;
             
             // Remove last digit from number
             number = number / 10;
+            
+            // Break if index equals maxDigit
+            if (index == maxDigit) {
+                System.out.println("Maximum 10 digits reached. Remaining digits ignored.");
+                break;
+            }
         }
         
         // Handle zero case
@@ -73,8 +62,6 @@ public class LargestSecondLargestDigitDynamic {
         
         // Display results
         System.out.println("\n===== Results =====");
-        System.out.println("Original number: " + originalNumber);
-        System.out.println("Total digits stored: " + index);
         System.out.print("Digits stored: ");
         for (int i = index - 1; i >= 0; i--) {
             System.out.print(digits[i] + " ");

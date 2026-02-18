@@ -1,3 +1,5 @@
+package com.gla.array.Level1;
+
 import java.util.Scanner;
 
 public class Copy2DTo1D {

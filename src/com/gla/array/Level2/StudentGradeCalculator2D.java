@@ -1,16 +1,17 @@
+package com.gla.array.Level2;
+
 import java.util.Scanner;
 
-public class StudentGradeCalculatorArray {
+public class StudentGradeCalculator2D {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Enter number of students: ");
         int numStudents = sc.nextInt();
         
-        // Create arrays to store data
-        double[] physicsMarks = new double[numStudents];
-        double[] chemistryMarks = new double[numStudents];
-        double[] mathsMarks = new double[numStudents];
+        // Create 2D array to store marks (Physics, Chemistry, Maths)
+        // marks[i][0] = Physics, marks[i][1] = Chemistry, marks[i][2] = Maths
+        double[][] marks = new double[numStudents][3];
         double[] percentages = new double[numStudents];
         String[] grades = new String[numStudents];
         String[] remarks = new String[numStudents];
@@ -23,8 +24,8 @@ public class StudentGradeCalculatorArray {
             // Input Physics marks with validation
             while (true) {
                 System.out.print("Physics marks: ");
-                physicsMarks[i] = sc.nextDouble();
-                if (physicsMarks[i] >= 0) {
+                marks[i][0] = sc.nextDouble();
+                if (marks[i][0] >= 0) {
                     break;
                 } else {
                     System.out.println("Invalid marks. Please enter positive values.");
@@ -32,13 +33,13 @@ public class StudentGradeCalculatorArray {
                     break;
                 }
             }
-            if (physicsMarks[i] < 0) continue;
+            if (marks[i][0] < 0) continue;
             
             // Input Chemistry marks with validation
             while (true) {
                 System.out.print("Chemistry marks: ");
-                chemistryMarks[i] = sc.nextDouble();
-                if (chemistryMarks[i] >= 0) {
+                marks[i][1] = sc.nextDouble();
+                if (marks[i][1] >= 0) {
                     break;
                 } else {
                     System.out.println("Invalid marks. Please enter positive values.");
@@ -46,13 +47,13 @@ public class StudentGradeCalculatorArray {
                     break;
                 }
             }
-            if (chemistryMarks[i] < 0) continue;
+            if (marks[i][1] < 0) continue;
             
             // Input Maths marks with validation
             while (true) {
                 System.out.print("Maths marks: ");
-                mathsMarks[i] = sc.nextDouble();
-                if (mathsMarks[i] >= 0) {
+                marks[i][2] = sc.nextDouble();
+                if (marks[i][2] >= 0) {
                     break;
                 } else {
                     System.out.println("Invalid marks. Please enter positive values.");
@@ -62,9 +63,9 @@ public class StudentGradeCalculatorArray {
             }
         }
         
-        // Calculate percentage and grade
+        // Calculate percentage and grade using 2D array
         for (int i = 0; i < numStudents; i++) {
-            double totalMarks = physicsMarks[i] + chemistryMarks[i] + mathsMarks[i];
+            double totalMarks = marks[i][0] + marks[i][1] + marks[i][2];
             percentages[i] = (totalMarks / 300) * 100;
             
             // Determine grade and remarks based on percentage
@@ -90,12 +91,13 @@ public class StudentGradeCalculatorArray {
         }
         
         // Display results
-        System.out.println("\n===== Student Grade Report =====");
+        System.out.println("\n===== Student Grade Report (Using 2D Array) =====");
         for (int i = 0; i < numStudents; i++) {
             System.out.println("\n----- Student " + (i + 1) + " -----");
-            System.out.println("Physics: " + physicsMarks[i]);
-            System.out.println("Chemistry: " + chemistryMarks[i]);
-            System.out.println("Maths: " + mathsMarks[i]);
+            System.out.println("Physics: " + marks[i][0]);
+            System.out.println("Chemistry: " + marks[i][1]);
+            System.out.println("Maths: " + marks[i][2]);
+            System.out.println("Total: " + (marks[i][0] + marks[i][1] + marks[i][2]));
             System.out.println("Percentage: " + String.format("%.2f", percentages[i]) + "%");
             System.out.println("Grade: " + grades[i]);
             System.out.println("Remarks: " + remarks[i]);
