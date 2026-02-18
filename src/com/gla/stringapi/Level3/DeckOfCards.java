@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class DeckOfCards {
@@ -60,5 +62,6 @@ public class DeckOfCards {
 
         String[][] result = distribute(deck, n, players);
         if (result != null) printPlayers(result);
+        sc.close();
     }
 }

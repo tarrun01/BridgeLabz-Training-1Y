@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class MonthCalendar {
@@ -49,5 +51,6 @@ public class MonthCalendar {
             if ((start + day) % 7 == 0) System.out.println();
         }
         System.out.println();
+        sc.close();
     }
 }

@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class CharFrequencyNestedLoop {
@@ -40,5 +42,6 @@ public class CharFrequencyNestedLoop {
         String s = sc.nextLine();
         System.out.println("Character Frequencies:");
         for (String entry : charFrequency(s)) System.out.println(entry);
+        sc.close();
     }
 }

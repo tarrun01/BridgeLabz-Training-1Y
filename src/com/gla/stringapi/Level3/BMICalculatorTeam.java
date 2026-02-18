@@ -1,8 +1,10 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class BMICalculatorTeam {
 
-    // Method to calculate BMI and return result as 2D String array
+
     static String[][] calcBMI(double[][] data) {
         String[][] result = new String[10][4];
         for (int i = 0; i < 10; i++) {
@@ -36,9 +38,10 @@ public class BMICalculatorTeam {
         double[][] data = new double[10][2];
         for (int i = 0; i < 10; i++) {
             System.out.print("Enter weight (kg) and height (cm) for person " + (i + 1) + ": ");
-            data[i][0] = sc.nextDouble(); // weight
-            data[i][1] = sc.nextDouble(); // height
+            data[i][0] = sc.nextDouble(); 
+            data[i][1] = sc.nextDouble(); 
         }
         display(calcBMI(data));
+        sc.close();
     }
 }

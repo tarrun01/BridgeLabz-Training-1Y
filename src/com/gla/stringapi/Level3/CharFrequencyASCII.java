@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class CharFrequencyASCII {
@@ -39,8 +41,8 @@ public class CharFrequencyASCII {
         System.out.print("Enter a string: ");
         String s = sc.nextLine();
         System.out.printf("%-12s %-10s%n", "Character", "Frequency");
-        System.out.println("----------------------");
         for (String[] row : charFrequency(s))
             System.out.printf("%-12s %-10s%n", row[0], row[1]);
+        sc.close();
     }
 }

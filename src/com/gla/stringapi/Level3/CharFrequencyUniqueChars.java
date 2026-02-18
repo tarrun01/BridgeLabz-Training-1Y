@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class CharFrequencyUniqueChars {
@@ -43,5 +45,6 @@ public class CharFrequencyUniqueChars {
         System.out.println("----------------------");
         for (String[] row : charFrequency(s))
             System.out.printf("%-12s %-10s%n", row[0], row[1]);
+        sc.close();
     }
 }

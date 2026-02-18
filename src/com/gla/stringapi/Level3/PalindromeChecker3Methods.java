@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class PalindromeChecker3Methods {
@@ -38,5 +40,6 @@ public class PalindromeChecker3Methods {
         System.out.println("Logic 1 (Loop):      " + isPalindromeLoop(s));
         System.out.println("Logic 2 (Recursion): " + isPalindromeRecursive(s, 0, s.length() - 1));
         System.out.println("Logic 3 (Array):     " + isPalindromeArray(s));
+    sc.close();
     }
 }

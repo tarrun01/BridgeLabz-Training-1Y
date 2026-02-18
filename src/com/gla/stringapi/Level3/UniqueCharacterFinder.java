@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class UniqueCharacterFinder {
@@ -34,5 +36,6 @@ public class UniqueCharacterFinder {
         System.out.print("Unique characters: ");
         for (char c : uniqueChars(s)) System.out.print(c + " ");
         System.out.println();
+        sc.close();
     }
 }

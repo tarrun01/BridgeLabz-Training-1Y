@@ -1,3 +1,4 @@
+package com.gla.stringapi.Level3;
 import java.util.Scanner;
 
 public class AnagramChecker {
@@ -32,5 +33,8 @@ public class AnagramChecker {
             System.out.println("\"" + s1 + "\" and \"" + s2 + "\" are Anagrams!");
         else
             System.out.println("\"" + s1 + "\" and \"" + s2 + "\" are NOT Anagrams.");
+    sc.close();
     }
+
+    
 }

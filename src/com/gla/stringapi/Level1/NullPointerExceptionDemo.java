@@ -36,9 +36,6 @@ public class NullPointerExceptionDemo {
     public static void main(String[] args) {
         System.out.println("===== NullPointerException Demonstration =====");
         
-        // Uncomment the line below to see the exception being generated
-        // generateException();
-        
         System.out.println("\nNote: generateException() is commented to prevent program crash");
         System.out.println("Uncomment it to see the actual exception");
         

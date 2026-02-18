@@ -1,3 +1,5 @@
+package com.gla.stringapi.Level3;
+
 import java.util.Scanner;
 
 public class FirstNonRepeatingChar {
@@ -23,5 +25,6 @@ public class FirstNonRepeatingChar {
             System.out.println("No non-repeating character found.");
         else
             System.out.println("First non-repeating character: " + result);
+        sc.close();
     }
 }
