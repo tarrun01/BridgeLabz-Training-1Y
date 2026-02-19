@@ -1,2 +1,1 @@
-# BridgeLabz-Training-1Y
-BridgeLabz Training 1Y
+Assignmant 1,2,3 Solutions
