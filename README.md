@@ -1,1 +1,1 @@
-#For Solution Kindly Checkout Programing-construct Branch
+Bridge Labz Assignment 6 And Assignment 8 Solutions
