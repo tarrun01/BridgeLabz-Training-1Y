@@ -1,4 +1,4 @@
-package com.gla.QueueInterface;
+package com.gla.JavaCollection.QueueInterface;
 import java.util.LinkedList;
 import java.util.Queue;
 
