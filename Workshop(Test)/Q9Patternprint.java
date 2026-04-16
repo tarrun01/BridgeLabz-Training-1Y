@@ -14,4 +14,4 @@ public class Q9Patternprint {
             System.out.println();
         }
     }
-}
+}             
